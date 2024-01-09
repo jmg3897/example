@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="toolbar_background_black">#252323</color>
+
+    <color name="item_fix_history_text_black">#252323</color>
+    <color name="item_fix_history_shop_name_text_black">#555555</color>
+    <color name="item_fix_history_bike_name_text_black">#595656</color>
+
+    <color name="item_coupon_selected_background_grey">#cccccc</color>
+    <color name="item_coupon_unselected_background_white">#FFFFFF</color>
+
+    <color name="alert_dialog_text_color_yellow">#FCC623</color>
+
+    <color name="customer_app_background_grey">#E1E2E1</color>
+    <color name="recognize_vin_yellow">#FEBE00</color>
+    <color name="recognize_vin_qr_scan_tint_black">#252323</color>
+    <color name="scan_qr_description_background_transparent_grey">#59000000</color>
+    <color name="recognize_vin_clear_button_grey">#cccccc</color>
+    <color name="alert_dialog_warning_title_red">#E31D2E</color>
+
+    <color name="border_recognize_vin_insert_layout_yellow">#FEBE00</color>
+
+</resources>

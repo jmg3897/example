@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fixHistory"
+            type="com.gobikebank.example.fixhistory.common.model.FixHistories.FixHistory" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/item_fix_history_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/item_coupon_and_fix_history_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/item_fix_history_corp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="@{fixHistory.corpName}"
+            android:textColor="@color/item_fix_history_text_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="CORP_NAME" />
+
+        <TextView
+            android:id="@+id/item_fix_history_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{fixHistory.repairDate}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/item_fix_history_corp_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="DATE" />
+
+        <TextView
+            android:id="@+id/item_fix_history_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="@{fixHistory.shopName}"
+            android:textColor="@color/item_fix_history_shop_name_text_black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_fix_history_corp_name"
+            tools:text="SHOP_NAME" />
+
+        <TextView
+            android:id="@+id/item_fix_history_marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{fixHistory.makerName}"
+            android:textColor="@color/item_fix_history_text_black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_fix_history_shop_name"
+            tools:text="MAKER" />
+
+        <TextView
+            android:id="@+id/item_fix_history_bike_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{fixHistory.bikeName}"
+            android:textColor="@color/item_fix_history_bike_name_text_black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/item_fix_history_marker"
+            app:layout_constraintTop_toBottomOf="@id/item_fix_history_shop_name"
+            tools:text="MODEL" />
+
+        <TextView
+            android:id="@+id/item_fix_history_ssn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{fixHistory.bikeSsn}"
+            app:layout_constraintStart_toEndOf="@id/item_fix_history_bike_name"
+            app:layout_constraintTop_toBottomOf="@id/item_fix_history_shop_name"
+            tools:text="SSN" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

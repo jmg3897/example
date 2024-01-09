@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/recognize_vin_yellow" />
+            <size
+                android:width="50dp"
+                android:height="50dp" />
+        </shape>
+    </item>
+    <item
+        android:bottom="10dp"
+        android:drawable="@drawable/ic_recognize_vin_qr_scan"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp"/>
+</layer-list>

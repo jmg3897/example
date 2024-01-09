@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="activity"
+            type="com.gobikebank.example.fixhistory.legacy.RecognizeVinActivity" />
+
+        <variable
+            name="viewModel"
+            type="com.gobikebank.example.fixhistory.legacy.RecognizeVinViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recognize_vin_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context="com.gobikebank.example.fixhistory.legacy.RecognizeVinActivity">
+
+        <include
+            android:id="@+id/recognize_vin_toolbar"
+            layout="@layout/toolbar_bikebank_customer"
+            app:toolbarTitle="@{viewModel.toolbarTitle}" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/recognize_vin_progress_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circular_progress_indicator_background_white"
+            android:elevation="10dp"
+            android:indeterminate="true"
+            android:visibility="@{viewModel.showLoadingState ? View.VISIBLE : View.INVISIBLE}"
+            app:indicatorColor="@color/recognize_vin_yellow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:trackThickness="6dp" />
+
+        <TextView
+            android:id="@+id/recognize_vin_title_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/recognize_vin_title_text"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintTop_toBottomOf="@id/recognize_vin_toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recognize_vin_insert_container"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_recognize_vin_insert_layout"
+            app:layout_constraintTop_toBottomOf="@id/recognize_vin_title_textview">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/recognize_vin_insert_edittext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/recognize_vin_insert_edittext_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:text="@={viewModel.insertedVin}"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@id/recognize_vin_insert_edittext_clear_button"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/recognize_vin_insert_edittext_clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:onClick="@{()->viewModel.clearInsertedVin()}"
+                android:padding="8dp"
+                android:src="@drawable/baseline_clear_24"
+                android:visibility="@{viewModel.isClearInsertedVin ? View.INVISIBLE : View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/recognize_vin_scan_qr_button"
+                app:layout_constraintStart_toEndOf="@id/recognize_vin_insert_edittext"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/recognize_vin_scan_qr_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/recognize_vin_qr_scan_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/recognize_vin_insert_edittext_clear_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/recognize_vin_look_up_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/recognize_vin_look_up_text"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/recognize_vin_insert_container" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/recognize_vin_look_up_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_corner_recognize_vin_look_up_button"
+            android:text="@string/recognize_vin_look_up_button_text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/recognize_vin_look_up_textview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

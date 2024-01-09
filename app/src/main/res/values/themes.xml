@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Example" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="AppAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/AppAlertDialogTitle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/AppAlertDialogTitle</item>
+    </style>
+
+    <style name="AppAlertDialogTitle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/alert_dialog_text_color_yellow</item>
+    </style>
+</resources>

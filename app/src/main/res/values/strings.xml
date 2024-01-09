@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Example</string>
+    <string name="title_activity_list_for_compose">ListForComposeActivity</string>
+    <string name="title_activity_ripple_for_component">RippleForComponentActivity</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <string name="fix_history_text">정비내역</string>
+
+    <string name="recognize_vin_title_text">차량번호를\n직접 입력하거나,\nQR코드를 인식시켜 주세요.</string>
+    <string name="recognize_vin_insert_edittext_hint">예) 대구서파9118</string>
+    <string name="recognize_vin_look_up_text">차량번호 또는 QR코드로 인식된 차대번호를 기준으로\n내역을 조회합니다.</string>
+    <string name="recognize_vin_look_up_button_text">조회</string>
+    <string name="recognize_vin_blank_insert_alert_text">차대번호를 입력하거나 스캔해주세요.</string>
+
+    <string name="fix_history_empty_list_alert_dialog_text">정비 내역이 없거나, 등록되지 않은 차대번호입니다.</string>
+
+    <string name="alert_dialog_check">확인</string>
+    <string name="title_activity_fix_history">FixHistoryActivity</string>
+    <string name="title_activity_recognize_vin">RecognizeVinActivity</string>
+</resources>
